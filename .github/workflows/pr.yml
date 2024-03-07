@@ -1,0 +1,30 @@
+name: Build
+on:
+    pull_request:
+        branches:
+            - main
+
+
+jobs:
+    build:
+        name: "Build"
+        runs-on: windows-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+            
+            - run: echo "ASSEMBLY_VERSION=2.0.0.${{github.run_number}}" >> $GITHUB_ENV
+
+            - name: Set version
+              uses: KageKirin/set-csproj-version@v1
+              with:
+                file: Gport.UpgradeAllProjects/Gport.UpgradeAllProjects.csproj
+                version: ${{ env.ASSEMBLY_VERSION }}
+                regex: '^(?<major)[0-9+])\.(?<minor>[0-9+])\.(?<patch>[0-9+]).(?<build>[0-9+])$'
+            - name: dotnet build
+              run: dotnet build Gport.UpgradeAllProjects/Gport.UpgradeAllProjects.csproj
+            - name: dotnet pack
+              run: dotnet pack Gport.UpgradeAllProjects/Gport.UpgradeAllProjects.csproj
+            - name: upload artifact
+              uses: actions/upload-artifact@v4
+            

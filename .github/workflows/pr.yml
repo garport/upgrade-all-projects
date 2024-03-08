@@ -13,14 +13,11 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v4
             
-            - run: echo "ASSEMBLY_VERSION=2.0.${{github.run_number}}" >> $GITHUB_ENV
-
             - name: Set version
               uses: KageKirin/set-csproj-version@v1
               with:
                 file: Gport.UpgradeAllProjects/Gport.UpgradeAllProjects.csproj
-                version: ${{ env.ASSEMBLY_VERSION }}
-                xpath: //Project/PropertyGroup/Version
+                version: 2.0.${{github.run_number}}
             - name: dotnet build
               run: dotnet build Gport.UpgradeAllProjects/Gport.UpgradeAllProjects.csproj
             - name: dotnet pack

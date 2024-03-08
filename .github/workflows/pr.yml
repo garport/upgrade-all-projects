@@ -25,5 +25,6 @@ jobs:
             - name: upload artifact
               uses: actions/upload-artifact@v4
               with:
-                path: nupkg/*
+                name: tool-package
+                path: '**/*.nupkg'
             

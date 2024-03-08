@@ -20,7 +20,7 @@ jobs:
               with:
                 file: Gport.UpgradeAllProjects/Gport.UpgradeAllProjects.csproj
                 version: ${{ env.ASSEMBLY_VERSION }}
-                regex: '^\s*<Version>(?<major>0|[1-9]\d*)\.(?<minor>0|[1-9]\d*)(\.(?<patch>0|[1-9]\d*))<\/Version>$'
+                xpath: //Project/PropertyGroup/Version
             - name: dotnet build
               run: dotnet build Gport.UpgradeAllProjects/Gport.UpgradeAllProjects.csproj
             - name: dotnet pack

@@ -1,5 +1,6 @@
 name: Publish
 on:
+    workflow_dispatch:
     push:
         branches:
             - main
@@ -20,5 +21,5 @@ jobs:
                     # commit: ${{github.event.push.after}}
               
             - name: dotnet publish
-              run: dotnet nuget push "**/*.nupkg" --api-key ${{secrets.NUGET_KEY}}
+              run: dotnet nuget push "**/*.nupkg" --api-key ${{secrets.NUGET_KEY}}  --source "https://www.nuget.org/packages/Gport.UpgradeAllProjects"
             

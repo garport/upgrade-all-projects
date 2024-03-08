@@ -15,8 +15,8 @@ jobs:
               with:
                     workflow_conclusion: success
                     workflow: pr.yml
-                    workflow_search: true                    
+                    workflow_search: true           
               
             - name: dotnet pack
-              run: dotnet nuget push ./nupkg --api-ket ${{secrets.NUGET_KEY}}
+              run: dotnet nuget push ./nupkg --api-key ${{secrets.NUGET_KEY}}
             

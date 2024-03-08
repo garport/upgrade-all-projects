@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Gport.UpgradeAllProjects": {
+      "commandName": "Project",
+      "commandLineArgs": "sdk --solutionDirectory \"..\\..\\..\\..\\ConsoleApp1\""
+    }
+  }
+}

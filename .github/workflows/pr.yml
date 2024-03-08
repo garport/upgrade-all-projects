@@ -13,7 +13,7 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v4
             
-            - run: echo "ASSEMBLY_VERSION=2.0.${{github.run_number}}.0" >> $GITHUB_ENV
+            - run: echo "ASSEMBLY_VERSION=2.0.${{github.run_number}}" >> $GITHUB_ENV
 
             - name: Set version
               uses: KageKirin/set-csproj-version@v1

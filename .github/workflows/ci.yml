@@ -19,5 +19,5 @@ jobs:
                     workflow_search: true           
               
             - name: dotnet publish
-              run: dotnet nuget push ./nupkg --api-key ${{secrets.NUGET_KEY}}
+              run: dotnet nuget push "**/*.nupkg" --api-key ${{secrets.NUGET_KEY}}
             

@@ -17,7 +17,7 @@ jobs:
               uses: KageKirin/set-csproj-version@v1
               with:
                 file: Gport.UpgradeAllProjects/Gport.UpgradeAllProjects.csproj
-                version: 2.0.${{github.run_number}}
+                version: 1.0.${{github.run_number}}
             - name: dotnet build
               run: dotnet build Gport.UpgradeAllProjects/Gport.UpgradeAllProjects.csproj
             - name: dotnet pack

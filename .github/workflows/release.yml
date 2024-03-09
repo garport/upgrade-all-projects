@@ -1,9 +1,7 @@
 name: Publish
 on:
-    workflow_dispatch:
-    push:
-        branches:
-            - main
+    release:
+        types: [published, edited]
 
 jobs:
     build:
@@ -18,7 +16,6 @@ jobs:
                     workflow_conclusion: success
                     workflow: pr.yml
                     workflow_search: true
-                    # commit: ${{github.event.push.after}}
               
             - name: dotnet publish
               run: dotnet nuget push "**/*.nupkg" --api-key ${{secrets.NUGET_KEY}}  --source "https://api.nuget.org/v3/index.json"

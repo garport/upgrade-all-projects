@@ -12,18 +12,18 @@ if (args.Length == 0)
     Console.WriteLine($"upgrade-all-projects v{versionString}");
     Console.WriteLine("-------------");
     Console.WriteLine("\nUsage:");
-    Console.WriteLine("upgrade-all-projects sdk --solutionDirectory <path>");
+    Console.WriteLine("upgrade-all-projects sdk --sourceDirectory <path>");
     return;
 }
 var root = new RootCommand
 {
     Name = "upgrade-all-projects"
 };
-var path = new Option<DirectoryInfo>("--solutionDirectory", "The toplevel directory to search for .csproj files");
+var path = new Option<DirectoryInfo>("--sourceDirectory", "The toplevel directory to search for .csproj files");
 var sdk = new Command("sdk");
 sdk.AddOption(path);
-sdk.SetHandler(async solutionDirectory => {
-    var matchingFiles = Directory.EnumerateFiles(solutionDirectory.FullName, "*.csproj", SearchOption.AllDirectories)
+sdk.SetHandler(async sourceDirectory => {
+    var matchingFiles = Directory.EnumerateFiles(sourceDirectory.FullName, "*.csproj", SearchOption.AllDirectories)
                                  .ToArray(); 
     foreach (var file in matchingFiles)
     {

@@ -5,10 +5,6 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gport.UpgradeAllProjects", "Gport.UpgradeAllProjects\Gport.UpgradeAllProjects.csproj", "{B63C2B8C-9D42-44A5-BC3B-11F007794FAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{072702C4-4F0A-4271-B427-4FEE956C6CE4}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{4FE9A6B7-4FE0-4080-8562-EEF826BD2810}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,14 +15,9 @@ Global
 		{B63C2B8C-9D42-44A5-BC3B-11F007794FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B63C2B8C-9D42-44A5-BC3B-11F007794FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B63C2B8C-9D42-44A5-BC3B-11F007794FAF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{072702C4-4F0A-4271-B427-4FEE956C6CE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{072702C4-4F0A-4271-B427-4FEE956C6CE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{072702C4-4F0A-4271-B427-4FEE956C6CE4} = {4FE9A6B7-4FE0-4080-8562-EEF826BD2810}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {65103ED1-B343-413A-AAC5-515627643351}

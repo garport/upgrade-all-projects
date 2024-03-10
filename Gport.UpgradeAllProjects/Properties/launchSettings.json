@@ -2,7 +2,7 @@
   "profiles": {
     "Gport.UpgradeAllProjects": {
       "commandName": "Project",
-      "commandLineArgs": "sdk --solutionDirectory \"..\\..\\..\\..\\ConsoleApp1\""
+      "commandLineArgs": "sdk --solutionDirectory \"..\\..\\..\\..\\Test\""
     }
   }
 }

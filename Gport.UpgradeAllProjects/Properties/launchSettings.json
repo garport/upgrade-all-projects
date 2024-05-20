@@ -2,7 +2,11 @@
   "profiles": {
     "Gport.UpgradeAllProjects": {
       "commandName": "Project",
-      "commandLineArgs": "sdk --solutionDirectory \"..\\..\\..\\..\\Test\""
+      "commandLineArgs": "sdk --sourceDirectory \"..\\..\\..\\..\\Test\""
+    },
+    "net8": {
+      "commandName": "Project",
+      "commandLineArgs": "sdk --sourceDirectory \"..\\..\\..\\..\\Test\""
     }
   }
 }

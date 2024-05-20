@@ -62,4 +62,5 @@ sdk.SetHandler(async sourceDirectory => {
 }, path);
 
 root.AddCommand(sdk);
+root.AddCommand(net8);
 await root.InvokeAsync(args); 

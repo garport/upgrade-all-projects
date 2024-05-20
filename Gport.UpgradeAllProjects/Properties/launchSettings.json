@@ -6,7 +6,7 @@
     },
     "net8": {
       "commandName": "Project",
-      "commandLineArgs": "sdk --sourceDirectory \"..\\..\\..\\..\\Test\""
+      "commandLineArgs": "net8 --sourceDirectory \"..\\..\\..\\..\\Test\""
     }
   }
 }
